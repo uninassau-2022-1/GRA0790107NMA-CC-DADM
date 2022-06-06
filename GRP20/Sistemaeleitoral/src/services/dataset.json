@@ -1,0 +1,109 @@
+{
+    "candidates": [
+        {
+            "name": "Leonardo Estronda",
+            "role": "PRESIDENTE",
+            "politicalParty": "PXXT - Partido XXT",
+            "code": 69,
+            "votesNumber": 0
+        },
+        {
+            "name": " Elimar Gonzalez",
+            "role": "PRESIDENTE",
+            "politicalParty": "PPV - Partido do Povo Venezuelano",
+            "code": 42,
+            "votesNumber": 0
+        },
+        {
+            "name": "Joj Roberto",
+            "role": "PRESIDENTE",
+            "politicalParty": "PNCT - Partido Não Tem Como",
+            "code": 77,
+            "votesNumber": 0
+        },
+        {
+            "name": "Litlte Mouse",
+            "role": "GOVERNADOR",
+            "politicalParty": "PNCT - Partido Não Tem Como",
+            "code": 32,
+            "votesNumber": 0
+        },
+        {
+            "name": "Big Mouse",
+            "role": "GOVERNADOR",
+            "politicalParty": "PPCC - Partido Primeiro Comando da Capital",
+            "code": 19,
+            "votesNumber": 0
+        },
+        {
+            "name": "Requeijão",
+            "role": "GOVERNADOR",
+            "politicalParty": "PZS - Partido Zona Sul",
+            "code": 45,
+            "votesNumber": 0
+        },
+        {
+            "name": "Cleber Cleber",
+            "role": "SENADOR",
+            "politicalParty": "PC - Partido do Cleber",
+            "code": 49,
+            "votesNumber": 0
+        },
+        {
+            "name": "Xabi Hernandez",
+            "role": "SENADOR",
+            "politicalParty": "PZN - Partido Zona Norte",
+            "code": 34,
+            "votesNumber": 0
+        },
+        {
+            "name": "Sandrolax o Brabo",
+            "role": "SENADOR",
+            "politicalParty": "PPSNN - Partido do Pai do Seu Nenem",
+            "code": 47,
+            "votesNumber": 0
+        },
+        {
+            "name": "Comandante Habilton",
+            "role": "DEPUTADO_FEDERAL",
+            "politicalParty": "PP - Partido do Pilotos",
+            "code": 64,
+            "votesNumber": 0
+        },
+        {
+            "name": "Rubens Barrichelo",
+            "role": "DEPUTADO_FEDERAL",
+            "politicalParty": "PZN - Partido Zona Norte",
+            "code": 67,
+            "votesNumber": 0
+        },
+        {
+            "name": "Roberto Carlos",
+            "role": "DEPUTADO_FEDERAL",
+            "politicalParty": "PZN - Partido Zona Sul",
+            "code": 90,
+            "votesNumber": 0
+        },
+        {
+            "name": "Fabio da Silva",
+            "role": "DEPUTADO_ESTADUAL",
+            "politicalParty": "PA - Partido Ancap",
+            "code": 86,
+            "votesNumber": 0
+        },
+        {
+            "name": "Herbi José",
+            "role": "DEPUTADO_ESTADUAL",
+            "politicalParty": "PF - Partido do Fusca",
+            "code": 53,
+            "votesNumber": 0
+        },
+        {
+            "name": "Carlos Simione",
+            "role": "DEPUTADO_ESTADUAL",
+            "politicalParty": "P33 - Partido 33",
+            "code": 33,
+            "votesNumber": 0
+        }
+    ]
+}
