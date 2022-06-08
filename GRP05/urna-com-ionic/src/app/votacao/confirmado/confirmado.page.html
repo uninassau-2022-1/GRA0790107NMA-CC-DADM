@@ -1,0 +1,30 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div style="background: green; margin-top: 30px; padding: 8px;">
+    <h1 style="margin: 0; margin-bottom: 0%; margin-left: 65px; background: green;">Voto Confirmado!</h1>
+  </div>
+  
+  <div>
+    <button [routerLink]="['/votacao/']" style="margin-bottom: 100%;background: black; width: 130px; margin-top: 30px ;padding: 6px; margin-left: 100px; color: white; border-radius: 2px; padding: 14px;">VOTAR NOVAMENTE</button>
+  </div>
+
+  <div style="margin-top: 25px;">
+    <div>
+      <label for=""><b>Total de votos válidos apurados: </b> {{ totalVotos }}</label>
+    </div>
+    <div style="margin-top: 10px; align-items: center; text-align: center;">
+      <label for=""><b>Presidentes</b></label>
+    </div>
+    
+    <div style="margin-top: 10px;"> <!-- ngFor -->
+      <label for=""><b>Candidato {{ numPresidente }}:</b> {{ presidenteNome }}</label>
+    </div>
+  </div>
+
+  <div style="margin: 0;"></div>
+</ion-app>

@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Votação</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="!telaVotoConfirmado && isPresidente">
+  <div style="display: flex;">
+    <div style="margin-top: 30px; margin-left: 20px; font-size: 20px;"><b>Presidente</b></div>
+    <div><img style="width:150px; height: 150px; margin-left: 50px;" src="{{ fotoPresi }}" alt=""></div>
+  </div>
+
+  <div style="margin-top: 25px; width: 100%;">
+    <input style="width: 30px; margin-left: 125px;" type="text" maxlength="1" [(ngModel)]="primeiroNumPresi" (ngModelChange)="presidente()">
+    <input style="width: 30px; margin-left: 10px;" type="text" maxlength="1" [(ngModel)]="segundoNumPresi" (ngModelChange)="presidente()">
+  </div>
+
+  <div style="margin-top: 25px;">
+    <div>
+      <label for=""><b>Nome:</b> {{ presidenteNome }}</label>
+    </div>
+    <div style="margin-top: 15px;">
+      <label for=""><b>Partido:</b> {{ presidentePartido }}</label>
+    </div>
+  </div>
+
+  <div>
+    <button [disabled]="!btnConfirmar" [ngClass]="{'btnConfirmarDisabled': !btnConfirmar}" (click)="confirmarVoto(1)" style="background: green; width: 130px; padding: 6px; margin-left: 100px; margin-top: 60px; color: white; border-radius: 2px; padding: 14px;">CONFIRMAR</button>
+  </div>
+</ion-content>
+
+<!-- Tela de Vereador -->
+
+<ion-content *ngIf="!telaVotoConfirmado && !isPresidente">
+  <div style="display: flex;">
+    <div style="margin-top: 30px; margin-left: 20px; font-size: 20px;"><b>Vereador</b></div>
+    <div><img style="width:150px; height: 150px; margin-left: 50%;" src="{{ fotoVeri }}" alt=""></div>
+  </div>
+
+  <div style="margin-top: 25px; width: 100%;">
+    <input style="width: 30px; margin-left: 70px;" type="text" maxlength="1" [(ngModel)]="numVereador[0]" (ngModelChange)="vereador()">
+    <input style="width: 30px; margin-left: 10px;" type="text" maxlength="1" [(ngModel)]="numVereador[1]" (ngModelChange)="vereador()">
+    <input style="width: 30px; margin-left: 10px;" type="text" maxlength="1" [(ngModel)]="numVereador[2]" (ngModelChange)="vereador()">
+    <input style="width: 30px; margin-left: 10px;" type="text" maxlength="1" [(ngModel)]="numVereador[3]" (ngModelChange)="vereador()">
+    <input style="width: 30px; margin-left: 10px;" type="text" maxlength="1" [(ngModel)]="numVereador[4]" (ngModelChange)="vereador()">
+  </div>
+
+  <div style="margin-top: 25px;">
+    <div>
+      <label for=""><b>Nome:</b> {{ vereadorNome }}</label>
+    </div>
+    <div style="margin-top: 15px;">
+      <label for=""><b>Partido:</b> {{ vereadorPartido }}</label>
+    </div>
+  </div>
+
+  <div>
+    <button [disabled]="!btnConfirmar" [ngClass]="{'btnConfirmarDisabled': !btnConfirmar}" (click)="confirmarVoto(2)" style="background: green; width: 130px; padding: 6px; margin-left: 100px; margin-top: 60px; color: white; border-radius: 2px; padding: 14px;">CONFIRMAR</button>
+  </div>
+</ion-content>
+
+<ion-content *ngIf="telaVotoConfirmado" style="margin-bottom: 20%;">
+  <div style="background: green; margin-top: 30px; padding: 8px;">
+    <h1 style="margin: 0; margin-bottom: 0%; margin-left: 65px; background: green;">Voto Confirmado!</h1>
+  </div>
+  
+  <div>
+    <button (click)="votarNovamente()" style="background: black; width: 130px; margin-top: 30px ;padding: 6px; margin-left: 100px; color: white; border-radius: 2px; padding: 14px;">VOTAR NOVAMENTE</button>
+  </div>
+
+  <div style="margin-top: 40px;">
+    <div>
+      <label for=""><b>Total de votos válidos apurados: </b> {{ totalVotos }}</label>
+    </div>
+
+    <div style="margin-top: 10px; align-items: center; text-align: center;">
+      <label for=""><b>Presidentes</b></label>
+    </div>
+    
+    <div style="margin-top: 10px;" *ngFor="let presidente of presidentes"> <!-- ngFor -->
+      <label for=""><b>Candidato {{ presidente.num }}:</b> {{ presidente.totalVotos }}</label>
+    </div>
+
+    <div style="margin-top: 10px; align-items: center; text-align: center;">
+      <label for=""><b>Vereadores</b></label>
+    </div>
+    
+    <div style="margin-top: 10px;" *ngFor="let vereadore of vereadores"> <!-- ngFor -->
+      <label for=""><b>Candidato {{ vereadore.num }}:</b> {{ vereadore.totalVotos }}</label>
+    </div>
+  </div>
+
+  <div style="margin: 0;"></div>
+</ion-content>
